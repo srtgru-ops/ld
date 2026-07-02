@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دليل الإعفاء من دراسة المقررات — جامعة تبوك 1447هـ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    window.Chart = window.Chart || function(){ return { destroy(){}, update(){} }; };
+    window.__loadChartJs = function(){
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+      s.onload = function(){ if (typeof window.__chartReadyCallback === 'function') window.__chartReadyCallback(); };
+      s.onerror = function(){ console.warn('Chart.js CDN was not loaded; dashboard remains usable without rendered charts.'); };
+      document.addEventListener('DOMContentLoaded', function(){ document.head.appendChild(s); });
+    };
+    window.__loadChartJs();
+  </script>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --panel:#ffffff;
+      --panel2:#f9fafc;
+      --text:#1a2433;
+      --muted:#657286;
+      --line:#e5eaf1;
+      --primary:#165a72;
+      --primary2:#0e7490;
+      --gold:#b78b2f;
+      --green:#16845a;
+      --blue:#2563eb;
+      --purple:#7c3aed;
+      --red:#c2410c;
+      --shadow:0 20px 50px rgba(17,24,39,.08);
+      --radius:24px;
+      --soft:#eef7fa;
+      --soft2:#fff7e6;
+      --badge:#e9f5f8;
+    }
+    [data-theme="dark"]{
+      --bg:#0c1220;
+      --panel:#111a2b;
+      --panel2:#0f1726;
+      --text:#f3f6fb;
+      --muted:#aab6c9;
+      --line:#22304a;
+      --primary:#38bdf8;
+      --primary2:#22d3ee;
+      --gold:#f2c35d;
+      --green:#34d399;
+      --blue:#60a5fa;
+      --purple:#a78bfa;
+      --red:#fb923c;
+      --shadow:0 18px 45px rgba(0,0,0,.28);
+      --soft:#102536;
+      --soft2:#2b2412;
+      --badge:#102536;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 8% 5%, rgba(22,90,114,.14), transparent 30%),
+        radial-gradient(circle at 90% 12%, rgba(183,139,47,.18), transparent 26%),
+        var(--bg);
+      color:var(--text);
+      font-family:'IBM Plex Sans Arabic','Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      line-height:1.6;
+    }
+    html[dir="ltr"] body{font-family:'Inter','IBM Plex Sans Arabic',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
+    a{color:inherit}
+    .wrap{width:min(1440px,94vw);margin:0 auto;padding:28px 0 48px}
+    .hero{
+      position:relative;overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:32px;
+      padding:28px;
+      background:
+        linear-gradient(135deg, rgba(22,90,114,.96), rgba(13,47,67,.94) 56%, rgba(183,139,47,.88)),
+        var(--panel);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+    .hero::before{
+      content:"";position:absolute;inset:-80px auto auto -80px;width:260px;height:260px;border-radius:50%;
+      background:rgba(255,255,255,.14);filter:blur(1px)
+    }
+    html[dir="ltr"] .hero::before{inset:-80px -80px auto auto}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;position:relative;z-index:1;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);font-weight:700;font-size:13px}
+    .hero h1{font-size:clamp(28px,4vw,48px);line-height:1.18;margin:18px 0 12px;font-weight:800;letter-spacing:-.5px}
+    .hero p{margin:0;color:rgba(255,255,255,.85);max-width:880px;font-size:16px}
+    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    button,.btn{
+      border:none;border-radius:16px;padding:11px 14px;font-family:inherit;font-weight:800;cursor:pointer;
+      transition:.2s transform,.2s background,.2s border-color,.2s opacity;
+      display:inline-flex;gap:8px;align-items:center;justify-content:center;
+    }
+    button:hover,.btn:hover{transform:translateY(-1px)}
+    .btn-light{background:#fff;color:#123042}
+    .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22)}
+    .source-card{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:18px;backdrop-filter:blur(12px)}
+    .source-card strong{display:block;font-size:18px;margin-bottom:8px}.source-card span{display:block;color:rgba(255,255,255,.82);font-size:13px;margin-bottom:12px}
+    .source-tags{display:flex;gap:8px;flex-wrap:wrap}.source-tags b{font-size:12px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.16)}
+    .note-strip{margin-top:16px;padding:12px 14px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);font-size:13px;color:rgba(255,255,255,.88)}
+    .section{margin-top:22px}
+    .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .kpi{padding:18px;min-height:128px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .kpi::after{content:"";position:absolute;inset:auto -34px -34px auto;width:110px;height:110px;border-radius:50%;background:var(--soft)}
+    html[dir="ltr"] .kpi::after{inset:auto auto -34px -34px}
+    .kpi .num{font-size:31px;font-weight:900;color:var(--primary);line-height:1;position:relative;z-index:1}.kpi .label{font-weight:800;margin-top:10px;position:relative;z-index:1}.kpi .hint{color:var(--muted);font-size:12px;position:relative;z-index:1}
+    .filters{display:grid;grid-template-columns:1.2fr repeat(3,.8fr) auto;gap:12px;padding:16px;align-items:end}
+    label{display:block;font-weight:800;font-size:12px;color:var(--muted);margin-bottom:6px}
+    select,input{width:100%;border:1px solid var(--line);border-radius:16px;padding:12px 13px;font-family:inherit;background:var(--panel2);color:var(--text);outline:none}
+    select:focus,input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(14,116,144,.12)}
+    .reset{background:var(--primary);color:#fff;height:47px;min-width:125px}
+    .main-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}
+    .full{grid-column:1 / -1}.panel{padding:18px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px}
+    .panel h2{margin:0;font-size:20px}.sub{margin:4px 0 0;color:var(--muted);font-size:13px}.mini-badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 10px;background:var(--badge);color:var(--primary);font-weight:800;font-size:12px;white-space:nowrap}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab{background:var(--panel2);color:var(--muted);border:1px solid var(--line);padding:10px 12px;border-radius:999px}.tab.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .accordion-item{border:1px solid var(--line);border-radius:18px;margin-top:10px;background:var(--panel2);overflow:hidden}.accordion-title{display:flex;justify-content:space-between;align-items:center;padding:14px 15px;cursor:pointer;font-weight:900}.accordion-body{display:none;padding:0 15px 15px}.accordion-item.open .accordion-body{display:block}.conditions{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:0;padding:0;list-style:none}.conditions li{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;gap:10px;align-items:flex-start}.conditions i{font-style:normal;min-width:28px;height:28px;border-radius:10px;background:var(--soft);color:var(--primary);display:inline-flex;align-items:center;justify-content:center;font-weight:900}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{padding:16px;border-radius:20px;background:var(--panel2);border:1px solid var(--line);position:relative;min-height:150px}.step .n{width:34px;height:34px;border-radius:12px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:12px}.step h3{margin:0 0 8px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:13px}.step::after{content:"←";position:absolute;top:50%;left:-15px;transform:translateY(-50%);color:var(--primary);font-weight:900}.step:last-child::after{display:none}html[dir="ltr"] .step::after{content:"→";left:auto;right:-15px}.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.chart-box{height:330px}.table-tools{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap}.table-tools .small{color:var(--muted);font-size:13px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:18px}table{width:100%;border-collapse:separate;border-spacing:0;min-width:1050px;background:var(--panel)}th,td{padding:13px 14px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}th{position:sticky;top:0;background:var(--panel2);font-size:12px;color:var(--muted);font-weight:900;cursor:pointer;user-select:none}tr:last-child td{border-bottom:none}.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;font-size:12px;font-weight:800;background:var(--soft);color:var(--primary);white-space:nowrap}.tag.gold{background:var(--soft2);color:var(--gold)}.tag.green{background:rgba(22,132,90,.12);color:var(--green)}.tag.purple{background:rgba(124,58,237,.12);color:var(--purple)}.tag.blue{background:rgba(37,99,235,.12);color:var(--blue)}
+    .check-grid,.cert-grid,.faq-grid,.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.check,.cert,.faq,.insight,.rule{padding:15px;border:1px solid var(--line);background:var(--panel2);border-radius:20px}.check b,.cert b,.faq b,.insight b,.rule b{display:block;margin-bottom:6px;font-size:15px}.check span,.cert span,.faq span,.insight span,.rule span{color:var(--muted);font-size:13px}.icon{font-size:22px;display:inline-flex;width:42px;height:42px;border-radius:16px;align-items:center;justify-content:center;background:var(--soft);margin-bottom:10px}.cert{display:flex;flex-direction:column;gap:9px}.cert-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.cert-code{font-weight:900;color:var(--primary);font-size:18px}.cert ul{margin:0;padding:0 18px;color:var(--muted);font-size:13px}.empty{padding:22px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:18px;background:var(--panel2)}
+    .rules{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.rule{min-height:126px}.rule .time{display:inline-flex;padding:5px 9px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-size:12px;font-weight:900;color:var(--primary);margin-bottom:8px}.docs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.doc-item{display:flex;gap:10px;padding:13px;border-radius:18px;background:var(--panel2);border:1px solid var(--line)}.doc-item input{width:18px;height:18px;accent-color:var(--primary);margin-top:4px}.doc-item b{display:block}.doc-item span{font-size:13px;color:var(--muted)}
+    .source-links{display:grid;gap:6px;margin-top:10px}.source-links a{display:block;color:rgba(255,255,255,.88);font-size:12px;text-decoration:none}.source-links a:hover{text-decoration:underline}
+    details.tip{margin-top:12px;border:1px solid var(--line);background:var(--panel2);border-radius:18px;padding:12px}details.tip summary{font-weight:900;cursor:pointer}details.tip p{margin:9px 0 0;color:var(--muted);font-size:13px}.footnote{margin-top:22px;color:var(--muted);font-size:12px;text-align:center}.nowrap{white-space:nowrap}.muted{color:var(--muted)}
+    @media(max-width:1180px){.kpis{grid-template-columns:repeat(3,1fr)}.main-grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.step::after{display:none}.chart-grid{grid-template-columns:1fr}.rules,.check-grid,.cert-grid,.faq-grid,.insights{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){.wrap{width:min(96vw,100%);padding-top:14px}.hero{padding:20px;border-radius:24px}.hero-grid{grid-template-columns:1fr}.kpis,.filters,.conditions,.flow,.rules,.check-grid,.cert-grid,.faq-grid,.insights,.docs{grid-template-columns:1fr}.panel-head{flex-direction:column}.hero-actions button{width:100%}.chart-box{height:290px}}
+    @media print{body{background:#fff}.hero-actions,.filters,.tabs button,.reset{display:none!important}.card,.hero{box-shadow:none}.wrap{width:100%;padding:0}.main-grid,.chart-grid,.kpis{display:block}.card{break-inside:avoid;margin-top:12px}.table-wrap{overflow:visible}table{min-width:0;font-size:10px}.chart-box{height:260px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="eyebrow">جامعة تبوك · دليل الطالب الأكاديمي 1447هـ · مستكشف سياسات</span>
+        <h1 data-i18n="title">دليل الإعفاء من دراسة المقررات — جامعة تبوك 1447هـ</h1>
+        <p data-i18n="subtitle"></p>
+        <div class="hero-actions">
+          <button class="btn-light" onclick="toggleLang()" id="langBtn">English</button>
+          <button class="btn-ghost" onclick="toggleTheme()" data-i18n="themeBtn">تبديل الوضع الداكن</button>
+          <button class="btn-ghost" onclick="window.print()" data-i18n="printBtn">طباعة / حفظ PDF</button>
+        </div>
+      </div>
+      <aside class="source-card">
+        <strong data-i18n="sourceTitle">مصدر البيانات</strong>
+        <span data-i18n="sourceBody">تم بناء المحتوى من البنود الظاهرة في دليل الطالب الأكاديمي 1447هـ، مع جداول الإعفاء الخاصة بكلية إدارة الأعمال والكلية التطبيقية. هذه اللوحة ليست بديلاً عن الدليل الرسمي أو قرار الجهة المختصة.</span>
+        <div class="source-tags">
+          <b data-i18n="sourceTag1">سياسة وإجراءات</b><b data-i18n="sourceTag2">إعفاء مقرر</b><b data-i18n="sourceTag3">شهادات احترافية</b>
+        </div>
+        <div class="source-links" aria-label="Official sources">
+          <a href="https://www.ut.edu.sa/sites/default/files/2026-01/student_guide_47_0.pdf" target="_blank" rel="noopener">دليل الطالب الأكاديمي 1447هـ</a>
+          <a href="https://www.ut.edu.sa/the-applied-college/study/academic-programs/human-resources-0" target="_blank" rel="noopener">خطة الموارد البشرية</a>
+          <a href="https://www.ut.edu.sa/the-applied-college/study/academic-programs/professional-accounting" target="_blank" rel="noopener">خطة المحاسبة المهنية</a>
+        </div>
+      </aside>
+    </div>
+    <div class="note-strip" data-i18n="legalNote">تنبيه: الشروط هنا مرجعية ومبسطة بصريًا؛ عند التعارض يُرجع للنص الرسمي المعتمد في جامعة تبوك وعمادة القبول والتسجيل.</div>
+  </header>
+
+  <section class="section kpis" id="kpiBar"></section>
+
+  <section class="section card filters" aria-label="Filters">
+    <div>
+      <label data-i18n="searchLabel">بحث سريع</label>
+      <input id="searchInput" oninput="applyFilters()" placeholder="ابحث بالمقرر أو الشهادة أو القسم" />
+    </div>
+    <div>
+      <label data-i18n="collegeLabel">الكلية</label>
+      <select id="collegeFilter" onchange="populateFilterOptions();applyFilters()"></select>
+    </div>
+    <div>
+      <label data-i18n="departmentLabel">القسم الأكاديمي</label>
+      <select id="departmentFilter" onchange="applyFilters()"></select>
+    </div>
+    <div>
+      <label data-i18n="typeLabel">نوع الشهادة</label>
+      <select id="typeFilter" onchange="applyFilters()"></select>
+    </div>
+    <button class="reset" onclick="resetFilters()" data-i18n="resetBtn">إعادة ضبط</button>
+  </section>
+
+  <main class="main-grid">
+    <section class="card panel full">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="tracksTitle">مسارات الإعفاء الأربعة</h2>
+          <p class="sub" data-i18n="tracksSub">افتح كل مسار للاطلاع على الضوابط الحاكمة كما هي منظمة في الدليل.</p>
+        </div>
+        <span class="mini-badge" data-i18n="accordionHint">قابل للتوسيع</span>
+      </div>
+      <div class="tabs" id="trackTabs"></div>
+      <div id="trackAccordion"></div>
+      <details class="tip">
+        <summary data-i18n="termsTitle">توضيح المصطلحات: منتظم / معفى</summary>
+        <p data-i18n="termsBody">«منتظم» تعني أن حالة الطالب الأكاديمية تسمح بتقديم الطلب. «معفى» هو تقدير يرصد للمقرر عند اعتماد الإعفاء، ولا يعامل كدرجة رقمية ضمن المعدل التراكمي.</p>
+      </details>
+    </section>
+
+    <section class="card panel full">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="flowTitle">مسار تقديم الطلب</h2>
+          <p class="sub" data-i18n="flowSub">خطوات بوابة الطالب من الدخول حتى إحالة الطلب للجهة المختصة.</p>
+        </div>
+        <span class="mini-badge" data-i18n="flowBadge">1–5</span>
+      </div>
+      <div class="flow" id="flowSteps"></div>
+    </section>
+
+    <section class="card panel full">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="tableTitle">جدول المقارنة: المقرر والشهادة المطلوبة</h2>
+          <p class="sub" data-i18n="tableSub">الجدول يتغير مباشرة حسب الفلاتر، ويمكن الضغط على رأس العمود للفرز.</p>
+        </div>
+        <span class="mini-badge"><span id="resultCount">0</span> <span data-i18n="resultWord">نتيجة</span></span>
+      </div>
+      <div class="table-tools">
+        <span class="small" data-i18n="sortHint">اضغط على عناوين الأعمدة للترتيب.</span>
+        <button class="reset" onclick="downloadCSV()" data-i18n="csvBtn">تحميل CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table id="coursesTable">
+          <thead>
+            <tr>
+              <th data-key="college" data-i18n="thCollege">الكلية</th>
+              <th data-key="department" data-i18n="thDepartment">القسم</th>
+              <th data-key="course" data-i18n="thCourse">المقرر</th>
+              <th data-key="cert" data-i18n="thCert">الشهادة المطلوبة</th>
+              <th data-key="code" data-i18n="thCode">الاختصار</th>
+              <th data-key="type" data-i18n="thType">نوع الشهادة</th>
+              <th data-key="level" data-i18n="thLevel">المستوى في الخطة</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <div id="emptyState" class="empty" style="display:none" data-i18n="emptyState">لا توجد نتائج مطابقة للفلاتر الحالية.</div>
+    </section>
+
+    <section class="card panel">
+      <div class="panel-head">
+        <div><h2 data-i18n="barTitle">عدد المقررات حسب القسم</h2><p class="sub" data-i18n="barSub">مقارنة مصفوفية بين الأقسام والكليات.</p></div>
+      </div>
+      <div class="chart-box"><canvas id="deptChart"></canvas></div>
+    </section>
+
+    <section class="card panel">
+      <div class="panel-head">
+        <div><h2 data-i18n="donutTitle">توزيع المقررات حسب الكلية</h2><p class="sub" data-i18n="donutSub">تتغير النسب مع الفلاتر.</p></div>
+      </div>
+      <div class="chart-box"><canvas id="collegeChart"></canvas></div>
+    </section>
+
+    <section class="card panel full">
+      <div class="panel-head">
+        <div><h2 data-i18n="eligTitle">ملخص أهلية الإعفاء</h2><p class="sub" data-i18n="eligSub">قائمة سريعة قبل رفع الطلب.</p></div>
+        <span class="mini-badge" data-i18n="advisorBadge">للطالب والمرشد</span>
+      </div>
+      <div class="check-grid" id="eligibilityGrid"></div>
+    </section>
+
+    <section class="card panel full">
+      <div class="panel-head">
+        <div><h2 data-i18n="certDirTitle">دليل الشهادات الاحترافية</h2><p class="sub" data-i18n="certDirSub">يعرض كل شهادة والمقرر أو المقررات التي ترتبط بها، ويتحدث حسب الفلاتر.</p></div>
+      </div>
+      <div class="cert-grid" id="certGrid"></div>
+      <div id="certEmpty" class="empty" style="display:none" data-i18n="certEmpty">لا توجد شهادات مطابقة.</div>
+    </section>
+
+    <section class="card panel full">
+      <div class="panel-head">
+        <div><h2 data-i18n="faqTitle">أسئلة سريعة</h2><p class="sub" data-i18n="faqSub">إجابات مختصرة لاستخدام الطالب والمرشد الأكاديمي.</p></div>
+      </div>
+      <div class="faq-grid" id="faqGrid"></div>
+    </section>
+  </main>
+
+  <div class="footnote" data-i18n="footerNote">تم إعداد هذه اللوحة كأداة عرض مرجعية. القرارات النهائية والاعتماد تكون حسب الدليل الرسمي والإجراءات المعتمدة لدى جامعة تبوك.</div>
+</div>
+
+<script>
+const state = { lang:'ar', theme:'light', filtered:[], sortKey:'college', sortDir:1 };
+
+const T = {
+  ar:{
+    eyebrow:'جامعة تبوك · دليل الطالب الأكاديمي 1447هـ · مستكشف سياسات',
+    title:'دليل الإعفاء من دراسة المقررات — جامعة تبوك 1447هـ',
+    subtitle:'',
+    themeBtn:'تبديل الوضع الداكن', printBtn:'طباعة / حفظ PDF', sourceTitle:'مصدر البيانات',
+    sourceBody:'تم بناء المحتوى من البنود الظاهرة في دليل الطالب الأكاديمي 1447هـ، مع جداول الإعفاء الخاصة بكلية إدارة الأعمال والكلية التطبيقية، وإضافة مستوى المقرر في الخطة بحسب صفحات الخطط الرسمية المتاحة. هذه اللوحة ليست بديلاً عن الدليل الرسمي أو قرار الجهة المختصة.',
+    sourceTag1:'سياسة وإجراءات', sourceTag2:'إعفاء مقرر', sourceTag3:'شهادات احترافية', legalNote:'تنبيه: الشروط هنا مرجعية ومبسطة بصريًا؛ عند التعارض يُرجع للنص الرسمي المعتمد في جامعة تبوك وعمادة القبول والتسجيل.',
+    searchLabel:'بحث سريع', collegeLabel:'الكلية', departmentLabel:'القسم الأكاديمي', typeLabel:'نوع الشهادة', resetBtn:'إعادة ضبط', all:'الكل',
+    tracksTitle:'مسارات الإعفاء الأربعة', tracksSub:'افتح كل مسار للاطلاع على الضوابط الحاكمة كما هي منظمة في الدليل.', accordionHint:'قابل للتوسيع', termsTitle:'توضيح المصطلحات: منتظم / معفى', termsBody:'«منتظم» تعني أن حالة الطالب الأكاديمية تسمح بتقديم الطلب. «معفى» هو تقدير يرصد للمقرر عند اعتماد الإعفاء، ولا يعامل كدرجة رقمية ضمن المعدل التراكمي.',
+    flowTitle:'مسار تقديم الطلب', flowSub:'خطوات بوابة الطالب من الدخول حتى إحالة الطلب للجهة المختصة.', flowBadge:'1–5',
+    tableTitle:'جدول المقارنة: المقرر والشهادة المطلوبة', tableSub:'الجدول يتغير مباشرة حسب الفلاتر، ويمكن الضغط على رأس العمود للفرز.', resultWord:'نتيجة', sortHint:'اضغط على عناوين الأعمدة للترتيب.', csvBtn:'تحميل CSV',
+    thCollege:'الكلية', thDepartment:'القسم', thCourse:'المقرر', thCert:'الشهادة المطلوبة', thCode:'الاختصار', thType:'نوع الشهادة', thLevel:'المستوى في الخطة', emptyState:'لا توجد نتائج مطابقة للفلاتر الحالية.',
+    barTitle:'عدد المقررات حسب القسم', barSub:'مقارنة مصفوفية بين الأقسام والكليات.', donutTitle:'توزيع المقررات حسب الكلية', donutSub:'تتغير النسب مع الفلاتر.',
+    eligTitle:'ملخص أهلية الإعفاء', eligSub:'قائمة سريعة قبل رفع الطلب.', advisorBadge:'للطالب والمرشد', certDirTitle:'دليل الشهادات الاحترافية', certDirSub:'يعرض كل شهادة والمقرر أو المقررات التي ترتبط بها، ويتحدث حسب الفلاتر.', certEmpty:'لا توجد شهادات مطابقة.',
+    rulesTitle:'قواعد زمنية وحاكمة', rulesSub:'نقاط لا ينبغي تجاوزها أثناء تقديم الطلب.', docsTitle:'المرفقات المطلوبة', docsSub:'استخدمها كقائمة تحقق قبل الإرسال.', faqTitle:'أسئلة سريعة', faqSub:'إجابات مختصرة لاستخدام الطالب والمرشد الأكاديمي.', insightsTitle:'رؤى تنفيذية', insightsSub:'ملاحظات آلية من البيانات المنظمة في اللوحة.', footerNote:'تم إعداد هذه اللوحة كأداة عرض مرجعية. القرارات النهائية والاعتماد تكون حسب الدليل الرسمي والإجراءات المعتمدة لدى جامعة تبوك.',
+    kTracks:'مسارات الإعفاء', kTracksHint:'عام + كليتان + إجراء', kConditions:'ضوابط/خطوات منظمة', kConditionsHint:'حسب المسارات المعروضة', kCap:'سقف الإعفاء', kCapHint:'من وحدات الخطة الدراسية', kColleges:'كليات مغطاة', kCollegesHint:'إدارة الأعمال والتطبيقية', kCourses:'مقررات مرتبطة', kCoursesHint:'إعفاء مبني على شهادة', kCerts:'شهادات مذكورة', kCertsHint:'اختصارات احترافية',
+    noData:'لا توجد بيانات',
+  },
+  en:{
+    eyebrow:'University of Tabuk · Academic Student Guide 1447H · Policy Explorer',
+    title:'Course Exemption Guide — University of Tabuk 1447H',
+    subtitle:'',
+    themeBtn:'Toggle dark mode', printBtn:'Print / Save PDF', sourceTitle:'Data source',
+    sourceBody:'Content is structured from the visible items in the 1447H Academic Student Guide, including the Business Administration and Applied College certificate-exemption tables, with study-plan levels added from available official program-plan pages. This dashboard is not a substitute for the official guide or competent authority decision.',
+    sourceTag1:'Policy & procedure', sourceTag2:'Course exemption', sourceTag3:'Professional certificates', legalNote:'Note: The conditions here are visually simplified for reference. In case of conflict, refer to the official University of Tabuk guide and Deanship of Admission and Registration procedures.',
+    searchLabel:'Quick search', collegeLabel:'College', departmentLabel:'Academic department', typeLabel:'Certification type', resetBtn:'Reset', all:'All',
+    tracksTitle:'Four exemption tracks', tracksSub:'Expand each track to view its governing conditions.', accordionHint:'Expandable', termsTitle:'Terms: Regular / Exempted', termsBody:'“Regular” means the student academic status allows submitting the request. “Exempted” is the recorded course grade after approval and is not treated as a numeric grade in GPA.',
+    flowTitle:'Application path', flowSub:'Student portal steps from login to routing the request to the competent unit.', flowBadge:'1–5',
+    tableTitle:'Comparison table: course and required certification', tableSub:'The table updates instantly with filters; click a column header to sort.', resultWord:'results', sortHint:'Click column headers to sort.', csvBtn:'Download CSV',
+    thCollege:'College', thDepartment:'Department', thCourse:'Course', thCert:'Required certification', thCode:'Code', thType:'Certification type', thLevel:'Study-plan level', emptyState:'No results match the current filters.',
+    barTitle:'Courses by department', barSub:'Matrix comparison across departments and colleges.', donutTitle:'Course distribution by college', donutSub:'Percentages update with filters.',
+    eligTitle:'Eligibility checklist', eligSub:'Quick review before submitting the request.', advisorBadge:'Student & advisor', certDirTitle:'Certification directory', certDirSub:'Shows each certification and the course(s) it maps to; it updates with filters.', certEmpty:'No matching certifications.',
+    rulesTitle:'Timing and policy rules', rulesSub:'Points that should not be overlooked during submission.', docsTitle:'Required documents', docsSub:'Use as a checklist before submission.', faqTitle:'Quick FAQ', faqSub:'Concise answers for students and advisors.', insightsTitle:'Executive insights', insightsSub:'Auto-generated observations from the structured dashboard data.', footerNote:'This dashboard is prepared as a reference display tool. Final decisions and approvals follow the official guide and University of Tabuk procedures.',
+    kTracks:'Exemption tracks', kTracksHint:'General + two colleges + process', kConditions:'Structured conditions/steps', kConditionsHint:'Across displayed tracks', kCap:'Exemption cap', kCapHint:'Of study plan units', kColleges:'Covered colleges', kCollegesHint:'Business & Applied', kCourses:'Mapped courses', kCoursesHint:'Certificate-based exemption', kCerts:'Referenced certifications', kCertsHint:'Professional abbreviations',
+    noData:'No data'
+  }
+};
+
+const tracks = [
+  {
+    id:'general', icon:'📘',
+    ar:{name:'الإعفاء العام من دراسة المقررات', summary:'ينظم الإعفاء بما لا يتجاوز 25% من وحدات الخطة الدراسية، وفق حالات مثل الجوائز، الموهبة/الابتكار، الشهادات الاحترافية، والاختبارات المعيارية.',
+      conditions:[
+        'أن يكون الطالب منتظمًا.',
+        'ألا يتجاوز مجموع الإعفاء 25% من مجموع الوحدات الدراسية للخطة الدراسية.',
+        'أن يكون طلب الإعفاء مرتبطًا بالمقرر المطلوب الإعفاء منه.',
+        'قبول الإعفاء بناءً على الفوز بجائزة دولية أو وطنية في مجال المقرر.',
+        'قبول الإعفاء للموهوبين والمبتكرين وفق الجهات المعتمدة في مجال المقرر.',
+        'قبول الإعفاء بناءً على شهادة احترافية تغطي 75% أو أكثر من مخرجات تعلم المقرر.',
+        'قبول الإعفاء بناءً على اختبار معياري بدرجة/نسبة لا تقل عن 75% حسب ما تحدده الجهة المختصة.',
+        'تتم دراسة التوافق بين محتوى الشهادة/الاختبار ومخرجات تعلم المقرر قبل التوصية.',
+        'يرصد تقدير «معفى» عند اعتماد الإعفاء ولا تدخل نقاط المقرر في المعدل التراكمي.'
+      ]},
+    en:{name:'General course exemption', summary:'Regulates exemption up to 25% of study-plan units through awards, gifted/innovator status, professional certification, or standardized tests.',
+      conditions:[
+        'The student must have regular academic status.',
+        'Total exemptions must not exceed 25% of the study-plan units.',
+        'The request must be related to the course from which exemption is requested.',
+        'Exemption may be based on winning an international or national award in the course field.',
+        'Exemption may apply to gifted/innovative students through approved entities in the course field.',
+        'Exemption may be based on a professional certification covering at least 75% of course learning outcomes.',
+        'Exemption may be based on a standardized test score/percentage of at least 75%, as determined by the competent unit.',
+        'Content alignment between the certificate/test and course learning outcomes is reviewed before recommendation.',
+        'After approval, the course is recorded as “Exempted” and does not contribute points to GPA.'
+      ]}
+  },
+  {
+    id:'business', icon:'🏛️',
+    ar:{name:'إعفاءات كلية إدارة الأعمال', summary:'مقررات محددة في أقسام الإدارة، نظم المعلومات الإدارية، والتسويق ترتبط بشهادات احترافية مسماة.',
+      conditions:[
+        'أن يكون الطالب منتظمًا.',
+        'أن يكون الطالب من الفئة/الكلية المشمولة بهذا المسار: كلية إدارة الأعمال.',
+        'أن يكون الإعفاء على المقررات والشهادات المحددة في جدول كلية إدارة الأعمال.',
+        'إتمام البرنامج أو الشهادة الاحترافية لدى مركز محترف بجامعة تبوك وأداء الاختبار حسب ما ورد في الدليل.',
+        'أن يقدم الطلب قبل رصد الدرجة النهائية للمقرر.',
+        'لا يطبق الإعفاء على مقرر سبق رصد نتيجته النهائية.',
+        'إرفاق الشهادة الاحترافية أو ما يثبت اجتيازها عند تقديم الطلب.',
+        'يرصد تقدير «معفى» بعد الاعتماد ولا يحتسب ضمن المعدل التراكمي.'
+      ]},
+    en:{name:'Business Administration College exemptions', summary:'Specific courses in Management, MIS, and Marketing are mapped to named professional certifications.',
+      conditions:[
+        'The student must have regular academic status.',
+        'The student must belong to the covered track: Business Administration College.',
+        'The exemption applies only to the courses and certifications listed in the college table.',
+        'The professional program/certification is completed through Mohteref Center at University of Tabuk and the test is taken as stated in the guide.',
+        'The request must be submitted before the final course grade is posted.',
+        'Exemption does not apply to a course whose final result has already been recorded.',
+        'Attach the professional certificate or proof of passing when submitting the request.',
+        'After approval, the course is recorded as “Exempted” and is not counted in GPA.'
+      ]}
+  },
+  {
+    id:'applied', icon:'🎓',
+    ar:{name:'إعفاءات الكلية التطبيقية', summary:'مقررات محددة في المحاسبة المهنية والموارد البشرية ترتبط بشهادات احترافية مسماة.',
+      conditions:[
+        'أن يكون الطالب منتظمًا.',
+        'أن يكون الطالب من الفئة/الكلية المشمولة بهذا المسار: الكلية التطبيقية.',
+        'أن يكون الإعفاء على المقررات والشهادات المحددة في جدول الكلية التطبيقية.',
+        'إتمام البرنامج أو الشهادة الاحترافية لدى مركز محترف بجامعة تبوك وأداء الاختبار حسب ما ورد في الدليل.',
+        'أن يقدم الطلب قبل رصد الدرجة النهائية للمقرر.',
+        'لا يطبق الإعفاء على مقرر سبق رصد نتيجته النهائية.',
+        'إرفاق الشهادة الاحترافية أو ما يثبت اجتيازها عند تقديم الطلب.',
+        'يرصد تقدير «معفى» بعد الاعتماد ولا يحتسب ضمن المعدل التراكمي.'
+      ]},
+    en:{name:'Applied College exemptions', summary:'Specific Professional Accounting and Human Resources courses are mapped to named professional certifications.',
+      conditions:[
+        'The student must have regular academic status.',
+        'The student must belong to the covered track: Applied College.',
+        'The exemption applies only to the courses and certifications listed in the Applied College table.',
+        'The professional program/certification is completed through Mohteref Center at University of Tabuk and the test is taken as stated in the guide.',
+        'The request must be submitted before the final course grade is posted.',
+        'Exemption does not apply to a course whose final result has already been recorded.',
+        'Attach the professional certificate or proof of passing when submitting the request.',
+        'After approval, the course is recorded as “Exempted” and is not counted in GPA.'
+      ]}
+  },
+  {
+    id:'procedure', icon:'🧭',
+    ar:{name:'إجراءات التقديم', summary:'خطوات مشتركة عبر بوابة الطالب تشمل اختيار الخدمة، تحديد الجهة أو القسم، إرفاق المستندات، وإرسال الطلب.',
+      conditions:[
+        'الدخول على بوابة الطالب/النظام الأكاديمي.',
+        'اختيار خدمة الطلبات أو النماذج ذات العلاقة بالإعفاء.',
+        'اختيار الكلية أو القسم الصحيح بحسب مسار الإعفاء.',
+        'إرفاق الشهادة الاحترافية أو المستند المؤيد بصيغة واضحة.',
+        'إرسال الطلب ومتابعة حالته حتى اتخاذ الإجراء من الجهة المختصة.'
+      ]},
+    en:{name:'Application procedure', summary:'Common portal steps: choose the service, select the correct college/department, attach documents, and submit the request.',
+      conditions:[
+        'Log in to the student portal / academic system.',
+        'Choose the relevant requests/forms service for exemption.',
+        'Select the correct college or department according to the exemption track.',
+        'Attach the professional certificate or supporting document clearly.',
+        'Submit the request and follow its status until the competent unit takes action.'
+      ]}
+  }
+];
+
+const courses = [
+  {college:{ar:'كلية إدارة الأعمال',en:'Business Administration'}, department:{ar:'الإدارة',en:'Management'}, course:{ar:'إدارة المشاريع',en:'Project Management'}, cert:{ar:'محترف الأعمال في إدارة المشاريع',en:'Certified Business Professional in Project Management'}, code:'CBP-PM', type:{ar:'إدارة أعمال',en:'Business'}, level:{ar:'المستوى السادس',en:'Level 6'}},
+  {college:{ar:'كلية إدارة الأعمال',en:'Business Administration'}, department:{ar:'نظم المعلومات الإدارية',en:'Management Information Systems'}, course:{ar:'أتمتة المكاتب',en:'Office Automation'}, cert:{ar:'شهادة أخصائي مايكروسوفت أوفيس',en:'Microsoft Office Specialist'}, code:'MOS', type:{ar:'تقنية مكتبية',en:'Office Technology'}, level:{ar:'مقرر اختياري / يحتاج تثبيت المستوى من الخطة',en:'Elective / level needs confirmation from plan'}},
+  {college:{ar:'كلية إدارة الأعمال',en:'Business Administration'}, department:{ar:'التسويق',en:'Marketing'}, course:{ar:'مبادئ التسويق',en:'Principles of Marketing'}, cert:{ar:'محترف الأعمال في التسويق',en:'Certified Business Professional in Marketing'}, code:'CBP-M', type:{ar:'تسويق',en:'Marketing'}, level:{ar:'المستوى الثالث',en:'Level 3'}},
+  {college:{ar:'كلية إدارة الأعمال',en:'Business Administration'}, department:{ar:'التسويق',en:'Marketing'}, course:{ar:'إدارة المبيعات والبيع الشخصي',en:'Sales Management and Personal Selling'}, cert:{ar:'محترف الأعمال في المبيعات',en:'Certified Business Professional in Sales'}, code:'CBP-S', type:{ar:'مبيعات',en:'Sales'}, level:{ar:'المستوى الرابع / حسب الخطة المعتمدة للقسم',en:'Level 4 / per approved department plan'}},
+  {college:{ar:'الكلية التطبيقية',en:'Applied College'}, department:{ar:'المحاسبة المهنية',en:'Professional Accounting'}, course:{ar:'محاسبة الزكاة والضرائب',en:'Zakat and Tax Accounting'}, cert:{ar:'شهادة فني المحاسبة',en:'Accounting Technician Certificate'}, code:'SCOPA', type:{ar:'محاسبة',en:'Accounting'}, level:{ar:'المستوى الثالث',en:'Level 3'}},
+  {college:{ar:'الكلية التطبيقية',en:'Applied College'}, department:{ar:'المحاسبة المهنية',en:'Professional Accounting'}, course:{ar:'المراجعة',en:'Auditing'}, cert:{ar:'شهادة فني المحاسبة',en:'Accounting Technician Certificate'}, code:'SCOPA', type:{ar:'محاسبة',en:'Accounting'}, level:{ar:'المستوى الرابع',en:'Level 4'}},
+  {college:{ar:'الكلية التطبيقية',en:'Applied College'}, department:{ar:'الموارد البشرية',en:'Human Resources'}, course:{ar:'تطوير القادة والتخطيط التعاقبي',en:'Leadership Development and Succession Planning'}, cert:{ar:'محترف الأعمال في القيادة الإدارية',en:'Certified Business Professional in Leadership'}, code:'CBP-LS', type:{ar:'قيادة وموارد بشرية',en:'Leadership & HR'}, level:{ar:'المستوى الرابع',en:'Level 4'}}
+];
+
+const flowSteps = [
+  {ar:{t:'الدخول للبوابة',d:'تسجيل الدخول إلى بوابة الطالب أو النظام الأكاديمي.'}, en:{t:'Login',d:'Sign in to the student portal or academic system.'}},
+  {ar:{t:'اختيار الخدمة',d:'اختيار خدمة الطلبات/النماذج المتعلقة بالإعفاء من دراسة مقرر.'}, en:{t:'Choose service',d:'Select the request/form service related to course exemption.'}},
+  {ar:{t:'تحديد الجهة',d:'تحديد الكلية أو القسم الصحيح: إدارة الأعمال أو الكلية التطبيقية.'}, en:{t:'Select unit',d:'Choose the correct college or department: Business or Applied College.'}},
+  {ar:{t:'إرفاق المستندات',d:'رفع الشهادة الاحترافية أو ما يثبت الحالة المطلوبة للإعفاء.'}, en:{t:'Attach documents',d:'Upload the professional certificate or supporting evidence.'}},
+  {ar:{t:'الإرسال والمتابعة',d:'إرسال الطلب ومتابعة حالته حتى الإجراء من الجهة المختصة.'}, en:{t:'Submit & track',d:'Submit the request and track its status until reviewed.'}}
+];
+
+const eligibility = [
+  {icon:'✅', ar:{t:'حالة الطالب منتظم',d:'الضابط المشترك الأبرز في مسارات الإعفاء.'}, en:{t:'Regular status',d:'The key shared eligibility condition across tracks.'}},
+  {icon:'⏳', ar:{t:'قبل رصد الدرجة النهائية',d:'يرفع الطلب قبل اعتماد النتيجة النهائية للمقرر.'}, en:{t:'Before final grade',d:'Submit before the course final result is posted.'}},
+  {icon:'🎯', ar:{t:'تطابق محتوى الشهادة',d:'الشهادة/الاختبار يجب أن يرتبط بمخرجات تعلم المقرر.'}, en:{t:'Content alignment',d:'The certificate/test must align with the course learning outcomes.'}},
+  {icon:'📈', ar:{t:'حد 75%',d:'يستخدم حد 75% للتوافق مع مخرجات التعلم أو درجة الاختبار وفق المسار.'}, en:{t:'75% threshold',d:'Used for outcome alignment or test score according to the track.'}},
+  {icon:'🧾', ar:{t:'مرفقات واضحة',d:'الشهادة أو مستند الحالة يجب أن يرفق مع الطلب.'}, en:{t:'Clear evidence',d:'Attach the certificate or required supporting document.'}},
+  {icon:'🔒', ar:{t:'بعد الاعتماد',d:'يرصد المقرر معفى ولا يدخل في المعدل التراكمي.'}, en:{t:'After approval',d:'The course is recorded as exempted and does not affect GPA.'}}
+];
+
+const rules = [
+  {ar:{time:'قبل التقديم',t:'تحقق من المسار',d:'اختر المسار المناسب: عام، كلية إدارة الأعمال، الكلية التطبيقية، أو إجراء التقديم.'}, en:{time:'Before applying',t:'Check the track',d:'Select the appropriate track: general, Business, Applied, or procedure.'}},
+  {ar:{time:'أثناء الطلب',t:'ارفع المستند الصحيح',d:'استخدم الشهادة الاحترافية أو ما يثبت الجائزة/الموهبة/الاختبار حسب الحالة.'}, en:{time:'During request',t:'Upload the right proof',d:'Use the certificate or award/gifted/test evidence as applicable.'}},
+  {ar:{time:'قبل رصد الدرجة',t:'لا تنتظر نهاية المقرر',d:'وجود درجة نهائية مسجلة قد يمنع قبول طلب الإعفاء.'}, en:{time:'Before final grade',t:'Do not wait',d:'A posted final grade may prevent acceptance of exemption.'}},
+  {ar:{time:'بعد الاعتماد',t:'الأثر الأكاديمي',d:'يرصد تقدير «معفى» ولا يحسب ضمن المعدل التراكمي.'}, en:{time:'After approval',t:'Academic effect',d:'The course is recorded as “Exempted” and is not counted in GPA.'}}
+];
+
+const docs = [
+  {ar:{t:'الشهادة الاحترافية',d:'للإعفاءات المرتبطة بالمقررات المحددة في الجداول.'}, en:{t:'Professional certificate',d:'For certificate-based exemptions in the listed tables.'}},
+  {ar:{t:'ما يثبت الجائزة أو الابتكار',d:'للمسار العام عند الاعتماد على جائزة أو موهبة/ابتكار.'}, en:{t:'Award/innovation proof',d:'For the general track when based on an award or gifted/innovator status.'}},
+  {ar:{t:'نتيجة الاختبار المعياري',d:'إذا كان الطلب مبنيًا على اختبار معياري بنسبة/درجة مؤهلة.'}, en:{t:'Standardized test result',d:'When the request is based on a qualifying standardized test score.'}},
+  {ar:{t:'وصف محتوى الشهادة عند الحاجة',d:'يساعد الجهة المختصة في مقارنة المخرجات بالمقرر.'}, en:{t:'Certificate content outline if needed',d:'Supports the competent unit in comparing outcomes with the course.'}}
+];
+
+const faqs = [
+  {ar:{q:'هل الإعفاء يحسب في المعدل؟',a:'لا. عند الاعتماد يرصد تقدير «معفى» ولا تدخل نقاط المقرر في المعدل التراكمي.'}, en:{q:'Does exemption count toward GPA?',a:'No. Once approved, the course is recorded as “Exempted” and does not contribute grade points to GPA.'}},
+  {ar:{q:'كم الحد الأعلى للإعفاء؟',a:'المسار العام يضع سقفًا لا يتجاوز 25% من مجموع وحدات الخطة الدراسية.'}, en:{q:'What is the maximum cap?',a:'The general track sets a cap not exceeding 25% of total study-plan units.'}},
+  {ar:{q:'هل أستطيع طلب الإعفاء بعد رصد الدرجة؟',a:'اللوحة تعرض القاعدة العملية: يرفع الطلب قبل رصد الدرجة النهائية للمقرر.'}, en:{q:'Can I apply after the grade is posted?',a:'The practical rule shown here is to submit before the final course grade is posted.'}},
+  {ar:{q:'هل كل شهادة احترافية تؤدي للإعفاء؟',a:'لا. يجب أن تكون الشهادة ضمن الجداول أو تحقق متطلبات المسار العام وتخضع لمراجعة الجهة المختصة.'}, en:{q:'Does every certification grant exemption?',a:'No. The certificate must be listed in the tables or meet the general track requirements and be reviewed by the competent unit.'}},
+  {ar:{q:'هل أستطيع العدول بعد اعتماد الإعفاء؟',a:'تعامل اللوحة الاعتماد كإجراء نهائي؛ يرجع للنص الرسمي والجهة المختصة عند وجود حالة خاصة.'}, en:{q:'Can I reverse an approved exemption?',a:'The dashboard treats approval as final; refer to the official text and competent unit for exceptional cases.'}},
+  {ar:{q:'من يعتمد الإعفاء؟',a:'تتم دراسة الطلب من الجهة الأكاديمية المختصة وتستكمل إجراءات الاعتماد عبر القبول والتسجيل حسب المسار.'}, en:{q:'Who approves exemption?',a:'The competent academic unit reviews the request and Admission and Registration completes the approval procedure according to the track.'}}
+];
+
+function L(obj){ return typeof obj === 'string' ? obj : obj[state.lang]; }
+function uniq(arr){ return [...new Set(arr)]; }
+function getText(row,key){ return key==='code' ? row.code : L(row[key]); }
+
+function applyI18n(){
+  document.documentElement.lang = state.lang;
+  document.documentElement.dir = state.lang === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(T[state.lang][key]) el.textContent = T[state.lang][key];
+  });
+  document.getElementById('langBtn').textContent = state.lang === 'ar' ? 'English' : 'العربية';
+  document.getElementById('searchInput').placeholder = state.lang === 'ar' ? 'ابحث بالمقرر أو الشهادة أو القسم' : 'Search course, certificate, or department';
+  renderStatic();
+  populateFilterOptions(true);
+  applyFilters();
+}
+
+function toggleLang(){ state.lang = state.lang === 'ar' ? 'en' : 'ar'; applyI18n(); }
+function toggleTheme(){ state.theme = state.theme === 'light' ? 'dark':'light'; document.documentElement.setAttribute('data-theme', state.theme); }
+
+function renderKPIs(){
+  const totalConditions = tracks.reduce((s,t)=>s+t[state.lang].conditions.length,0);
+  const colleges = uniq(courses.map(r=>L(r.college))).length;
+  const certs = uniq(courses.map(r=>r.code)).length;
+  const cards = [
+    [tracks.length, T[state.lang].kTracks, T[state.lang].kTracksHint],
+    [totalConditions, T[state.lang].kConditions, T[state.lang].kConditionsHint],
+    ['25%', T[state.lang].kCap, T[state.lang].kCapHint],
+    [colleges, T[state.lang].kColleges, T[state.lang].kCollegesHint],
+    [courses.length, T[state.lang].kCourses, T[state.lang].kCoursesHint],
+    [certs, T[state.lang].kCerts, T[state.lang].kCertsHint],
+  ];
+  document.getElementById('kpiBar').innerHTML = cards.map(c=>`<div class="card kpi"><div class="num">${c[0]}</div><div><div class="label">${c[1]}</div><div class="hint">${c[2]}</div></div></div>`).join('');
+}
+
+function renderTracks(){
+  const tabs = document.getElementById('trackTabs');
+  tabs.innerHTML = tracks.map((t,i)=>`<button class="tab ${i===0?'active':''}" onclick="activateTrack('${t.id}', this)">${t.icon} ${L(t).name}</button>`).join('');
+  renderAccordion(tracks[0].id);
+}
+function activateTrack(id, btn){ document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderAccordion(id); }
+function renderAccordion(activeId){
+  const box = document.getElementById('trackAccordion');
+  box.innerHTML = tracks.map(t=>{
+    const active = t.id===activeId ? 'open' : '';
+    const lang = t[state.lang];
+    return `<div class="accordion-item ${active}">
+      <div class="accordion-title" onclick="this.parentElement.classList.toggle('open')"><span>${t.icon} ${lang.name}</span><span>⌄</span></div>
+      <div class="accordion-body"><p class="muted">${lang.summary}</p><ul class="conditions">${lang.conditions.map((c,i)=>`<li><i>${i+1}</i><span>${c}</span></li>`).join('')}</ul></div>
+    </div>`;
+  }).join('');
+}
+
+function renderStatic(){
+  renderKPIs();
+  renderTracks();
+  document.getElementById('flowSteps').innerHTML = flowSteps.map((s,i)=>`<div class="step"><div class="n">${i+1}</div><h3>${L(s).t}</h3><p>${L(s).d}</p></div>`).join('');
+  document.getElementById('eligibilityGrid').innerHTML = eligibility.map(x=>`<div class="check"><span class="icon">${x.icon}</span><b>${L(x).t}</b><span>${L(x).d}</span></div>`).join('');
+  if (document.getElementById('rulesGrid')) document.getElementById('rulesGrid').innerHTML = rules.map(x=>`<div class="rule"><div class="time">${L(x).time}</div><b>${L(x).t}</b><span>${L(x).d}</span></div>`).join('');
+  if (document.getElementById('docsGrid')) document.getElementById('docsGrid').innerHTML = docs.map((x,i)=>`<label class="doc-item"><input type="checkbox"><span><b>${L(x).t}</b><span>${L(x).d}</span></span></label>`).join('');
+  document.getElementById('faqGrid').innerHTML = faqs.map(x=>`<div class="faq"><b>${L(x).q}</b><span>${L(x).a}</span></div>`).join('');
+  renderInsights();
+}
+
+function populateFilterOptions(preserve=false){
+  const current = preserve ? {
+    college:document.getElementById('collegeFilter').value,
+    department:document.getElementById('departmentFilter').value,
+    type:document.getElementById('typeFilter').value
+  } : {college:'',department:'',type:''};
+  const collegeSel = document.getElementById('collegeFilter');
+  const deptSel = document.getElementById('departmentFilter');
+  const typeSel = document.getElementById('typeFilter');
+  const colleges = uniq(courses.map(r=>L(r.college))).sort();
+  collegeSel.innerHTML = `<option value="">${T[state.lang].all}</option>` + colleges.map(x=>`<option>${x}</option>`).join('');
+  const selectedCollege = current.college;
+  let base = selectedCollege ? courses.filter(r=>L(r.college)===selectedCollege) : courses;
+  const departments = uniq(base.map(r=>L(r.department))).sort();
+  const types = uniq(base.map(r=>L(r.type))).sort();
+  deptSel.innerHTML = `<option value="">${T[state.lang].all}</option>` + departments.map(x=>`<option>${x}</option>`).join('');
+  typeSel.innerHTML = `<option value="">${T[state.lang].all}</option>` + types.map(x=>`<option>${x}</option>`).join('');
+  collegeSel.value = current.college && colleges.includes(current.college) ? current.college : '';
+  deptSel.value = current.department && departments.includes(current.department) ? current.department : '';
+  typeSel.value = current.type && types.includes(current.type) ? current.type : '';
+}
+
+function applyFilters(){
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const college = document.getElementById('collegeFilter').value;
+  const department = document.getElementById('departmentFilter').value;
+  const type = document.getElementById('typeFilter').value;
+  let rows = courses.filter(r=>{
+    const hay = [L(r.college),L(r.department),L(r.course),L(r.cert),r.code,L(r.type),L(r.level)].join(' ').toLowerCase();
+    return (!q || hay.includes(q)) && (!college || L(r.college)===college) && (!department || L(r.department)===department) && (!type || L(r.type)===type);
+  });
+  rows.sort((a,b)=> String(getText(a,state.sortKey)).localeCompare(String(getText(b,state.sortKey)), state.lang==='ar'?'ar':'en') * state.sortDir);
+  state.filtered = rows;
+  renderTable(rows); renderCharts(rows); renderCertDirectory(rows); renderInsights(rows);
+}
+
+function renderTable(rows){
+  document.getElementById('resultCount').textContent = rows.length;
+  document.getElementById('emptyState').style.display = rows.length ? 'none':'block';
+  document.getElementById('tableBody').innerHTML = rows.map(r=>`<tr>
+    <td><span class="tag gold">${L(r.college)}</span></td>
+    <td>${L(r.department)}</td>
+    <td><strong>${L(r.course)}</strong></td>
+    <td>${L(r.cert)}</td>
+    <td><span class="tag">${r.code}</span></td>
+    <td><span class="tag green">${L(r.type)}</span></td>
+    <td><span class="tag blue">${L(r.level)}</span></td>
+  </tr>`).join('');
+}
+
+document.querySelectorAll('#coursesTable th').forEach(th=>{
+  th.addEventListener('click',()=>{
+    const key = th.getAttribute('data-key');
+    if(state.sortKey===key) state.sortDir *= -1; else {state.sortKey=key; state.sortDir=1;}
+    applyFilters();
+  });
+});
+
+let deptChart, collegeChart;
+function renderCharts(rows){
+  const deptCounts = {};
+  rows.forEach(r => {
+    const key = L(r.department);
+    deptCounts[key] = (deptCounts[key] || 0) + 1;
+  });
+  const deptLabels = Object.keys(deptCounts);
+  const deptData = Object.values(deptCounts);
+  const c1 = document.getElementById('deptChart');
+  if (deptChart) deptChart.destroy();
+  deptChart = new Chart(c1, {
+    type: 'bar',
+    data: {
+      labels: deptLabels.length ? deptLabels : [T[state.lang].noData],
+      datasets: [{
+        label: T[state.lang].thCourse,
+        data: deptData.length ? deptData : [0],
+        borderWidth: 1,
+        borderRadius: 12
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.raw} ${T[state.lang].thCourse}` } }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { precision: 0 } },
+        x: { ticks: { autoSkip: false, maxRotation: state.lang === 'ar' ? 0 : 25, minRotation: 0 } }
+      }
+    }
+  });
+
+  const collegeCounts = {};
+  rows.forEach(r => {
+    const key = L(r.college);
+    collegeCounts[key] = (collegeCounts[key] || 0) + 1;
+  });
+  const collegeLabels = Object.keys(collegeCounts);
+  const collegeData = Object.values(collegeCounts);
+  const c2 = document.getElementById('collegeChart');
+  if (collegeChart) collegeChart.destroy();
+  collegeChart = new Chart(c2, {
+    type: 'doughnut',
+    data: {
+      labels: collegeLabels.length ? collegeLabels : [T[state.lang].noData],
+      datasets: [{
+        data: collegeData.length ? collegeData : [1],
+        borderWidth: 2,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '62%',
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.label}: ${ctx.raw}` } }
+      }
+    }
+  });
+}
+
+function renderCertDirectory(rows){
+  const map = new Map();
+  rows.forEach(r=>{
+    if(!map.has(r.code)) map.set(r.code,{code:r.code, cert:L(r.cert), type:L(r.type), college:new Set(), courses:[]});
+    const m = map.get(r.code);
+    m.college.add(L(r.college));
+    m.courses.push(`${L(r.course)} — ${L(r.department)} — ${L(r.level)}`);
+  });
+  const list = [...map.values()];
+  document.getElementById('certEmpty').style.display = list.length?'none':'block';
+  document.getElementById('certGrid').innerHTML = list.map(c=>`<div class="cert">
+    <div class="cert-top"><span class="cert-code">${c.code}</span><span class="tag purple">${c.type}</span></div>
+    <b>${c.cert}</b>
+    <span>${[...c.college].join(' · ')}</span>
+    <ul>${c.courses.map(x=>`<li>${x}</li>`).join('')}</ul>
+  </div>`).join('');
+}
+
+function renderInsights(rows = state.filtered.length ? state.filtered : courses){
+  const insightsEl = document.getElementById('insightsGrid');
+  if (!insightsEl) return;
+  const byDept = {};
+  rows.forEach(r=>{const d=L(r.department); byDept[d]=(byDept[d]||0)+1;});
+  const topDept = Object.entries(byDept).sort((a,b)=>b[1]-a[1])[0];
+  const certCount = uniq(rows.map(r=>r.code)).length;
+  const collegeCount = uniq(rows.map(r=>L(r.college))).length;
+  const common = state.lang==='ar'
+    ? [
+      {t:`${topDept?topDept[0]:'—'} هو القسم الأعلى ظهورًا`,d:`عدد المقررات المعروضة له: ${topDept?topDept[1]:0}.`},
+      {t:'شرط “منتظم” متكرر في المسارات',d:'كل المسارات المعروضة تبدأ بالتحقق من حالة الطالب الأكاديمية.'},
+      {t:'الإعفاء لا يرفع المعدل',d:'المقرر يرصد «معفى» بعد الاعتماد ولا يدخل في المعدل التراكمي.'},
+      {t:`${certCount} شهادات ضمن النتائج الحالية`,d:`تغطي ${rows.length} مقررات عبر ${collegeCount} كلية/كليات حسب الفلتر.`}
+    ]
+    : [
+      {t:`${topDept?topDept[0]:'—'} appears most`,d:`Displayed mapped courses: ${topDept?topDept[1]:0}.`},
+      {t:'“Regular” status is common',d:'Displayed tracks start by checking the student academic status.'},
+      {t:'Exemption does not improve GPA',d:'The course is recorded as “Exempted” and does not enter GPA.'},
+      {t:`${certCount} certifications in current results`,d:`They cover ${rows.length} courses across ${collegeCount} college(s) based on filters.`}
+    ];
+  insightsEl.innerHTML = common.map((x,i)=>`<div class="insight"><span class="icon">${['💡','🔁','📌','🧩'][i]}</span><b>${x.t}</b><span>${x.d}</span></div>`).join('');
+}
+
+function resetFilters(){
+  document.getElementById('searchInput').value='';
+  document.getElementById('collegeFilter').value='';
+  populateFilterOptions();
+  document.getElementById('departmentFilter').value='';
+  document.getElementById('typeFilter').value='';
+  applyFilters();
+}
+
+function downloadCSV(){
+  const rows = state.filtered.length ? state.filtered : courses;
+  const headers = [T[state.lang].thCollege,T[state.lang].thDepartment,T[state.lang].thCourse,T[state.lang].thCert,T[state.lang].thCode,T[state.lang].thType,T[state.lang].thLevel];
+  const csv = [headers, ...rows.map(r=>[L(r.college),L(r.department),L(r.course),L(r.cert),r.code,L(r.type),L(r.level)])]
+    .map(row=>row.map(v=>`"${String(v).replaceAll('"','""')}"`).join(',')).join('\n');
+  const blob = new Blob(["\ufeff"+csv], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = state.lang==='ar' ? 'جدول_الإعفاء_من_المقررات.csv' : 'course_exemption_table.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+applyI18n();
+window.__chartReadyCallback = function(){ renderCharts(state.filtered.length ? state.filtered : courses); };
+</script>
+</body>
+</html>
